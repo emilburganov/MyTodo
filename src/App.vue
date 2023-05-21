@@ -8,7 +8,7 @@
         <MyTaskForm @onAddTask="addTask"/>
         <ul role="list" class="divide-y divide-gray-100">
           <li v-for="task in taskList" :key="task.id" class="py-5">
-            <MyTaskCard @onRemove="removeTask(task.id)" @onDone="setDoneTask(task.id)" :model="task"/>
+            <MyTaskCard @onRemove="removeTask(task.id)" :model="task"/>
           </li>
         </ul>
         <MyButton v-if="taskList.length"
