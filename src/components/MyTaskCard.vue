@@ -1,6 +1,6 @@
 <template>
   <div class="flex gap-x-4">
-    <MyCheckbox @click="model.status = !model.status"/>
+    <MyCheckbox @click="$event.target.nodeName === 'INPUT' ? model.status = !model.status : null"/>
     <div class="truncate min-w-0">
       <p :class="{ 'line-through text-green-600': model.status }" class="truncate font-medium leading-7 text-gray-900">
         {{ model.title }}
