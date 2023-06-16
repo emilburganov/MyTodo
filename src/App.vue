@@ -3,7 +3,7 @@
     <div class="max-w-[600px] w-full">
       <div class="p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 flex-col">
         <h1 class="mb-4 text-center text-4xl font-bold leading-9 tracking-tight text-gray-900">
-          MyTodo List
+          Todo List
         </h1>
         <MyTaskForm @onAddTask="addTask"/>
         <ul role="list" class="divide-y divide-gray-100">
@@ -39,7 +39,7 @@ const taskList =
         :
         ref([{
           id: 0,
-          title: 'Create MyTodo app',
+          title: 'Create TodoList app',
           description: 'And publish it on GitHub',
           date: getCurrentDate(),
           status: false,
