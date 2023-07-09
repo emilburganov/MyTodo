@@ -49,11 +49,7 @@ const addTask = ({title, description}) => {
   taskList.value.push({id: taskList.value.length + 1, title, description, date: getCurrentDate(), status: false});
 };
 
-const setDoneTask = (id) => {
-  taskList.value.forEach(task => task.id === id ? task.status = true : null);
-};
-
-const removeTask = (id) => {
+const removeTask = id => {
   taskList.value = taskList.value.filter(task => task.id !== id);
 };
 
